@@ -12,6 +12,9 @@ public class Main
 	}
 
 
-
+	public void sampleMethod()
+	{
+		
+	}
 
 }
