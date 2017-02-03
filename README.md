@@ -4,4 +4,5 @@ Whatsup we should think of what we should do our project on!
 Potential Ideas:
 
 1.) Cashflow board game simulation
-2.) This is synced with Eclipse
+2.) This is synced with Eclipse!!!!
+3.) This still isnt quite working
