@@ -6,15 +6,15 @@ package Main;
 
 public class Main
 {
+	/**
+	 * Main Method
+	 * @param args
+	 */
 	public static void main(String[] args)
 	{
-		System.out.println("Hello");
+		System.out.print("Hello");
+		String s = " World!";
 	}
 
-
-	public void sampleMethod()
-	{
-		
-	}
 
 }
