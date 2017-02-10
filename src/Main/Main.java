@@ -16,7 +16,4 @@ public class Main
 		String s = " World!";
 	}
 	
-	anna can also edit this!
-
-
 }
