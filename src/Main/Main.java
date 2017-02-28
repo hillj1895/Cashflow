@@ -3,6 +3,9 @@ package Main;
 /**
  *  Just made this stuff to make sure Eclipse and GitHub are working correctly!!!!
  */
+/** 
+ * EUREKA!!!! IT WORKS!!!
+ */
 
 public class Main
 {
@@ -16,7 +19,8 @@ public class Main
 		String s = " World!";
 	}
 	
-	anna can also edit this!
-
-
+	/**
+	 * Joe is good to go!!!
+	 */
+	
 }
