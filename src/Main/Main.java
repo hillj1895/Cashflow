@@ -1,4 +1,3 @@
-package Main;
 
 /**
  *  Just made this stuff to make sure Eclipse and GitHub are working correctly!!!!
