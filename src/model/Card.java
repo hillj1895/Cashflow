@@ -16,7 +16,7 @@ public class Card
 
 
 	
-	public Market_Card(String title, String type, Boolean effect, int value){
+	public Card(String title, String type, Boolean effect, int value){
 		_title = title;
 		_type = type;
 		_effect = effect;

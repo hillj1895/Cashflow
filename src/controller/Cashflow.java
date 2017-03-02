@@ -1,5 +1,11 @@
 package controller;
 
-public class Cashflow {
+import view.*;
 
+public class Cashflow
+{
+	public static void main(String[] args)
+	{
+		new MainWindow();
+	}
 }
