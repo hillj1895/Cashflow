@@ -1,24 +1,23 @@
 /* 
- * hello
+ * this is a very broad object class
+ * i know we said all the card stacks would be in here but like
+ * would it make more sense for them to be in the individual card classes?
+ * - jackie
  */
-public class Market_Card
+public class Card
 {
 	private String _title;
-	private String _type; // repercent, refixed, expense, stock, gold, profit, aoffer, hoffer
+	private String _type; // you dont have to use this but i added it because theres so many different types of market cards i need something to keep track of which is which
 	private Boolean _effect; //True if it effects all players
-	private int _money; //If card type is expense or profit or gold
-	private int _fixedpayment; //For cards of type refixed with a sell price in addition to initial purchase OR for an offer amount (apartment offer - per unit, house offer - whole house)
-	private int _percentpayment; // percent + 100 for repercent with percentage payment
+	private int _value; // Any integer value that can be attached to the card. If card needs no value, put 0
+
+
 	
-	// When implemented there needs to be a way to check whether the player has the necessary things or not
-	
-	public Market_Card(String title, String type, Boolean effect, int money, int fixedpayment, int percentpayment){
+	public Market_Card(String title, String type, Boolean effect, int value){
 		_title = title;
 		_type = type;
 		_effect = effect;
-		_money = money;
-		_fixedpayment = fixedpayment;
-		_percentpayment = percentpayment;
+		_value = value;
 	}
 	
 
@@ -32,15 +31,10 @@ public class Market_Card
 	{
 		return _type;
 	}
-	public int getCost(){
-		return _money;
+	public int getValue(){
+		return _value;
 	}
-	public int getFixed(){
-		return _fixedpayment;
-	}
-	public int getPercent(){
-		return _percentpayment;
-	}
+
 	
 	
 }
