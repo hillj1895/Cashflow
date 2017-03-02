@@ -1,8 +1,6 @@
 /* 
- * this is just a marketcard class
- * i haven't added the method or the stack yet
- * not much to see here
- * carry on
+ * hi im very forgetful so my code is usually full of comments when its not finished sorry
+ * 
  */
 public class Market_Cards extends Market_Card {
 	private static final Boolean True = null;
