@@ -1,3 +1,5 @@
+package model;
+
 /* 
  * hi im very forgetful so my code is usually full of comments when its not finished sorry
  * 

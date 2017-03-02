@@ -1,3 +1,5 @@
+package model;
+
 /* 
  * this is a very broad object class
  * i know we said all the card stacks would be in here but like
