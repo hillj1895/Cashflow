@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.Random;
 import java.util.Stack;
 
 /**
@@ -32,8 +34,36 @@ public class CardStack extends Stack<Card>
 		return super.pop();
 	}
 	
+	public Card pickCard()
+	{
+		return this.pop();
+	}
+	
 	public int getSize()
 	{
 		return _size;
 	}
+
+	// Randomizes the stack with the cards in the array argument
+	public void randomizeCards(Card[] cardArray)
+	{
+		//CardStack cardStack = new CardStack();
+		ArrayList<Card> cardList = new ArrayList<Card>();
+		Random r = new Random();
+		
+		// Add all array contents to list
+		for(Card c : cardArray)
+		{
+			cardList.add(c);
+		}
+		
+		// Pushes a card at a random index in the card list
+		int initialLength = cardList.size();
+		for(int i=0; i < initialLength; i++)
+		{
+			push(cardList.remove(r.nextInt(cardList.size())));
+		}
+		
+	}
+
 }
