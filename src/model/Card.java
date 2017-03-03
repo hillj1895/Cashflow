@@ -37,7 +37,7 @@ public class Card
 
 
 
-	public Card(String title, String type, Boolean effect, int value){
+	public  Card (String title, String type, Boolean effect, int value, int value2, int value3, int value4){
 
 		_title = title;
 
@@ -46,7 +46,13 @@ public class Card
 		_effect = effect;
 
 		_value = value;
-
+		
+		_value1 = value2;
+		
+		_value2 = value3;
+		 
+		_value3 = value4;
+		
 	}
 	public String getTitle()
 
@@ -62,27 +68,17 @@ public class Card
 	public int getValue(){
 		return _value;
 	}
-
-	public  Card (String title, String type, Boolean effect, int value, int value2, int value3, int value4){
-
-		_title = title;
-
-		_type = type;
-
-		_effect = effect;
-
-		_value = value;
-		
-		_value1 = value;
-		
-		_value2 = value;
-		 
-		_value3 = value;
-		
-		_value4 = value;
-		
-
+	public int getValue2(){
+		return _value2;
 	}
+	public int getValue3(){
+		return _value3;
+	}
+	public int getValue4(){
+		return _value4;
+	}
+
+
 
 	
 }
