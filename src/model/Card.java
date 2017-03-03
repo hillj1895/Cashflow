@@ -22,6 +22,5 @@ public class Card
 	{
 		return _title;
 	}
-
 	
 }

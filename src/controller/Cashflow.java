@@ -7,13 +7,13 @@ public class Cashflow
 {
 	public static void main(String[] args)
 	{
-		BigDealStack bds = new BigDealStack();
+		MarketStack ms = new MarketStack();
 		
-		int initialSize = bds.getSize();
+		int initialSize = ms.getSize();
 		for(int i=0; i<initialSize; i++)
 		{
 			int num = i+1;
-			System.out.println(num + ": " + bds.pop().getTitle());
+			System.out.println(num + ": " + ((MarketCard) ms.pop()).getDescription()); //Always going to need this cast when getting description unfortunately
 		}
 	}
 }
