@@ -9,11 +9,11 @@ public class Cashflow
 	{
 		DoodadStack ds = new DoodadStack();
 		
-		int initialSize = ds.getStack().getSize();
+		int initialSize = ds.getSize();
 		for(int i=0; i<initialSize; i++)
 		{
 			int num = i+1;
-			System.out.println(num + ": " + ds.getStack().pop().getTitle());
+			System.out.println(num + ": " + ds.pop().getTitle());
 		}
 		
 	}

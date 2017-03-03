@@ -3,7 +3,7 @@ package model;
  * hi im very forgetful so my code is usually full of comments when its not finished sorry
  * 
  */
-public class Market_Cards extends Card {
+public class MarketCardStack extends Card {
 
 	public Market_Cards(String title, String type, Boolean effect, int value, int value2, int value3, int value4) {
 		super(title, type, effect, value, value2, value3, value4);

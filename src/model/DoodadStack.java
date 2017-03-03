@@ -2,15 +2,13 @@ package model;
 
 import java.util.*;
 
-public class DoodadStack
+public class DoodadStack extends CardStack
 {
-	private CardStack _doodadCardStack;
-	
 	private static DoodadCard D01 = new DoodadCard("New Tennis Racket", 200);
 	private static DoodadCard D02 = new DoodadCard("Food Processor",200);
 	private static DoodadCard D03 = new DoodadCard("Birthday Party for You Child", 500); //if you have a child 
 	private static DoodadCard D04 = new DoodadCard("Next-Gen Game Console", 600);
-	private static DoodadCard D05 = new DoodadCard("First DoodadCard for Child (Take out a loan if you must)", 5000); //if you have a child 
+	private static DoodadCard D05 = new DoodadCard("First Car for Child (Take out a loan if you must)", 5000); //if you have a child 
 	private static DoodadCard D06 = new DoodadCard("Jet Ski (Take out a loan if you must)", 3000);
 	private static DoodadCard D07 = new DoodadCard("New Tailored Suit", 1000);
 	private static DoodadCard D08 = new DoodadCard("New Rims for Your DoodadCard (Take outa  loan if you must)", 2000);
@@ -51,17 +49,17 @@ public class DoodadStack
 	private static DoodadCard D41 = new DoodadCard("Remodel Kitchen (Take out a loan if you must)", 7500);
 	private static DoodadCard D42 = new DoodadCard("Season Tickets", 1500);
 	
-	
+	// Constructor just calls makes this stack a randomized stack with Doodad cards
 	public DoodadStack()
 	{
-		_doodadCardStack = randomizeStack();
+		randomizeStack();
 	}
 
 
-	
-	private CardStack randomizeStack()
+	// Randomizes the stack with the member variable cards
+	private void randomizeStack()
 	{
-		CardStack cardStack = new CardStack();
+		//CardStack cardStack = new CardStack();
 		ArrayList<DoodadCard> cardList = new ArrayList<DoodadCard>();
 		Random r = new Random();
 		DoodadCard[] cardArray = {D01, D02, D03, D04, D05, D06, D07, D08, D09, D10,
@@ -75,19 +73,15 @@ public class DoodadStack
 			cardList.add(c);
 		}
 		
+		// Pushes a card at a random index in the card list
 		int initialLength = cardList.size();
 		for(int i=0; i < initialLength; i++)
 		{
-			cardStack.push(cardList.remove(r.nextInt(cardList.size())));
+			this.push(cardList.remove(r.nextInt(cardList.size())));
 		}
-		return cardStack;
 		
 	}
-	
-	public CardStack getStack()
-	{
-		return _doodadCardStack;
-	}
+
 
 	
 
