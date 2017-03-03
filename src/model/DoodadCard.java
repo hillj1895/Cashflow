@@ -6,5 +6,4 @@ public class DoodadCard extends Card
 	{
 		super(title, value);
 	}
-
 }
