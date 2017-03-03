@@ -122,6 +122,4 @@ public class Profession
 	{
 		return _creditCardDebt;
 	}
-	
 }
-	
