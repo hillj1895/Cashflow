@@ -1,4 +1,3 @@
-package model;
 
 /* 
  * this is a very broad object class
@@ -7,37 +6,69 @@ package model;
  * - jackie
  *
  */
+
 public class Card
+
 {
+
 	private String _title;
+
 	private String _type; // you dont have to use this but i added it because theres so many different types of market cards i need something to keep track of which is which
+
 	private Boolean _effect; //True if it effects all players
-	private int _value; // Any integer value that can be attached to the card. If card needs no value, put 0
 
-
+	private int _value; // Any integer value that can be attached to the card. If card needs no value, put 0. Value of cost for deal cards.
 	
-	public Card(String title, String type, Boolean effect, int value){
+	private int _value2;  //value of Down Payment
+	
+	private int _value3;  //value of Mortgage
+	
+	private int _value4; //value of Cash Flow
+
+
+
+	public  Card (String title, String type, Boolean effect, int value, int value2, int value3, int value4){
+
 		_title = title;
+
 		_type = type;
+
 		_effect = effect;
+
 		_value = value;
+		
+		_value1 = value2;
+		
+		_value2 = value3;
+		 
+		_value3 = value4;
+		
 	}
-	
-
-
 	public String getTitle()
+
 	{
 		return _title;
 	}
-	
+
 	public String getType()
 	{
 		return _type;
 	}
+
 	public int getValue(){
 		return _value;
 	}
+	public int getValue2(){
+		return _value2;
+	}
+	public int getValue3(){
+		return _value3;
+	}
+	public int getValue4(){
+		return _value4;
+	}
 
-	
+
+
 	
 }
