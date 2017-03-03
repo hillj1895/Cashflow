@@ -45,6 +45,11 @@ public class MainWindow {
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(186,85,211));
-		frame.add(panel);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(6, 6, 48, 47);
+		panel.add(panel_1);
 	}
 }

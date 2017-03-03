@@ -105,8 +105,8 @@ public class Market_Cards extends Card {
 		/* Need a decision function
 		 *Need separate functionalities (if statements) based on card type
 		 * Need a way that every player who is affected gets the decision option
-		 */ Do we check if they have the proper real estate needed? Or do we assume the player knows and obviously make it so they can't sell something they don't have
-		
+		 * Do we check if they have the proper real estate needed? Or do we assume the player knows and obviously make it so they can't sell something they don't have
+		*/
 	}
 	
 }
