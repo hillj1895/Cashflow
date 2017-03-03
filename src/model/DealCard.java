@@ -8,8 +8,6 @@ public class DealCard extends Card
 	private int _mortgage;
 	private int _cashFlowChange;
 	
-	
-	
 	public DealCard(String title, String description, int cost, int downPayment, int mortgage, int cashFlowChange)
 	{
 		super(title);
