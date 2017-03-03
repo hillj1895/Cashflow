@@ -152,7 +152,7 @@ public class MarketStack extends CardStack
 										REFixed1, REFixed2, REFixed3, REFixed4, REFixed5, REFixed6, REFixed7, REFixed8, REFixed9, REFixed10, REFixed11,
 										REHOffer1, REHOffer2,
 										REAOffer1, REAOffer2, REAOffer3, REAOffer4};
-		super.randomizeCards(marketCardArray);
+		randomizeCards(marketCardArray);
 	}
 
 	//profit MarketCard - value is how much $ is added
