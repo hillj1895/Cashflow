@@ -11,11 +11,11 @@ package model;
 public class Card
 {
 	private String _title;
-	private int _value; // Any integer value that can be attached to the card. If card needs no value, put 0. Value of cost for deal cards.
+	//private int _value; // Any integer value that can be attached to the card. If card needs no value, put 0. Value of cost for deal cards.
 
-	public  Card(String title, int value){
+	public  Card(String title)
+	{
 		_title = title;
-		_value = value;
 	}
 	
 	public String getTitle()
@@ -23,8 +23,5 @@ public class Card
 		return _title;
 	}
 
-	public int getValue()
-	{
-		return _value;
-	}	
+	
 }

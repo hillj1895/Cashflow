@@ -97,7 +97,7 @@ public class MarketStack extends CardStack
 	
 	public MarketStack()
 	{
-		MarketCard[] MarketCardArray = {Profit1, Profit2, 
+		MarketCard[] marketCardArray = {Profit1, Profit2, 
 										Gold1, Gold2, Gold3, Gold4, 
 										Expense1, Expense2, Expense3, Expense4, Expense5,
 										Stock1, Stock2, Stock3, Stock4,
@@ -105,7 +105,7 @@ public class MarketStack extends CardStack
 										REFixed1, REFixed2, REFixed3, REFixed4, REFixed5, REFixed6, REFixed7, REFixed8, REFixed9, REFixed10, REFixed11,
 										REHOffer1, REHOffer2,
 										REAOffer1, REAOffer2, REAOffer3, REAOffer4};
-		super.randomizeCards(MarketCardArray);
+		super.randomizeCards(marketCardArray);
 	}
 
 	//profit MarketCard - value is how much $ is added

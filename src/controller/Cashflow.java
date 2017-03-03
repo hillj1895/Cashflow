@@ -7,13 +7,13 @@ public class Cashflow
 {
 	public static void main(String[] args)
 	{
-		MarketStack ms = new MarketStack();
+		BigDealStack bds = new BigDealStack();
 		
-		int initialSize = ms.getSize();
+		int initialSize = bds.getSize();
 		for(int i=0; i<initialSize; i++)
 		{
 			int num = i+1;
-			System.out.println(num + ": " + ms.pop().getTitle());
+			System.out.println(num + ": " + bds.pop().getTitle());
 		}
 	}
 }
