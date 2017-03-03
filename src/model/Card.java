@@ -17,7 +17,7 @@ public class Card
 
 	private Boolean _effect; //True if it effects all players
 
-	private int _value; // Any integer value that can be attached to the card. If card needs no value, put 0. Value of cost for deal cards apparently.
+	private int _value; // Any integer value that can be attached to the card. If card needs no value, put 0. Value of cost for deal cards.
 	
 	private int _value2;  //value of Down Payment
 	
