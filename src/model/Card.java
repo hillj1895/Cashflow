@@ -1,3 +1,4 @@
+package model;
 
 /* 
  * this is a very broad object class
@@ -37,11 +38,11 @@ public class Card
 
 		_value = value;
 		
-		_value1 = value2;
+		_value2 = value2;
 		
-		_value2 = value3;
+		_value3 = value3;
 		 
-		_value3 = value4;
+		_value4 = value4;
 		
 	}
 	public String getTitle()

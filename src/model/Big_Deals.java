@@ -1,3 +1,4 @@
+package model;
 
 public class Big_Deals extends Card {
 

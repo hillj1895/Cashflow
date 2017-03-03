@@ -5,6 +5,11 @@ package model;
  */
 public class Market_Cards extends Card {
 
+	public Market_Cards(String title, String type, Boolean effect, int value, int value2, int value3, int value4) {
+		super(title, type, effect, value, value2, value3, value4);
+		// TODO Auto-generated constructor stub
+	}
+
 	//profit card - value is how much $ is added
 	//Not sure how we're working in the descriptions as it's a more graphical concept but for now I'm going to type them out
 	Card Profit1 = new Card("Small Business Boom!", "profit", true, 250,0,0,0);
