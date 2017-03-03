@@ -4,8 +4,6 @@ import java.util.*;
 
 public class Professions
 {
-	
-	
 	Profession Nurse = new Profession("Nurse", 3100, 600, 400, 100, 100, 200, 600, 0, 0, 200, 500, 47000, 6000, 5000, 4000);
 	
 	Profession Teacher = new Profession("Teacher", 3300, 500, 500, 100, 100, 200, 700, 0, 0, 
@@ -46,6 +44,10 @@ public class Professions
 	                      AirlinePilot, Lawyer, PoliceOfficer, Doctor, Mechanic, Janitor};	
 	
 	public Profession playerProf;
+	
+	public Professions() {}
+	
+	
 	
 	public Profession getProfession()
 	{
