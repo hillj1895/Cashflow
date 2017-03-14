@@ -56,9 +56,6 @@ public class Professions
 		return profs[n];
 	}
 	
-	public static void main String(args[])
-	{
-		
-	}
+
 	
 }
