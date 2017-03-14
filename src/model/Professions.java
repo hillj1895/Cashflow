@@ -53,6 +53,9 @@ public class Professions
 		
 	}
 	
-	
+	public static void main String(args[])
+	{
+		
+	}
 	
 }
