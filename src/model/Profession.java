@@ -1,3 +1,5 @@
+package model;
+
 
 public class Profession
 {
@@ -120,6 +122,4 @@ public class Profession
 	{
 		return _creditCardDebt;
 	}
-	
 }
-	

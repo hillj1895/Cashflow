@@ -1,7 +1,6 @@
 package model;
 import java.util.Random;
 
-
 public class Die {
 /*
  * Die will probably have to go in each individual turn, so that it can pull charity status
