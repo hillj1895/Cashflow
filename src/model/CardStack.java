@@ -47,7 +47,7 @@ public class CardStack extends Stack<Card>
 	// Randomizes the stack with the cards in the array argument
 	public void randomizeCards(Card[] cardArray)
 	{
-		//CardStack cardStack = new CardStack();
+		// CardStack cardStack = new CardStack();
 		ArrayList<Card> cardList = new ArrayList<Card>();
 		Random r = new Random();
 		

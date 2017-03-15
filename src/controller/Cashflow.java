@@ -21,7 +21,7 @@ public class Cashflow
 		for(int i=0; i<initialSize; i++)
 		{
 			int num = i+1;
-			System.out.println(num + ": " + ((MarketCard) ms.pop()).getDescription()); //Always going to need this cast when getting description unfortunately
+			System.out.println(num + ": " + ((MarketCard) ms.pop()).getTitle()); //Always going to need this cast when getting description unfortunately
 		}
 	}
 	
