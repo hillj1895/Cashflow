@@ -56,6 +56,6 @@ public class Professions
 		return profs[n];
 	}
 	
-	
+
 	
 }
