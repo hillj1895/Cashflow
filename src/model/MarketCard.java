@@ -7,13 +7,14 @@ public class MarketCard extends Card
 	private boolean _affectAll;
 	private int _value;
 	
-	public MarketCard(String title, String description, String type, boolean affectAll, int value)
+	public MarketCard(String title, String description, String type, boolean affectAll, int value, String addit)
 	{
 		super(title);
 		_description = description;
 		_type = type;
 		_affectAll = affectAll;
 		_value = value;
+		_addit = addit; //additional info
 	}
 	
 	public String getDescription()
@@ -35,6 +36,10 @@ public class MarketCard extends Card
 	{
 		return _value;
 	}	
+	public String getAddit()
+	{
+		return _addit;
+	}
 
 
 }
