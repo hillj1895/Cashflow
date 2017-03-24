@@ -20,6 +20,4 @@ public class GameBoard
 		_tiles.addTiles(t1, t2, t3, t4);
 	}
 	
-	
-	
 }

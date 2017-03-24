@@ -1,5 +1,9 @@
 package model;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Stack;
+
 public class SmallDealStack extends CardStack
 {
 	private static DealCard SD01 = new DealCard("",
@@ -116,16 +120,22 @@ public class SmallDealStack extends CardStack
 	private static DealCard SD38 = new DealCard("",
 									"",
 									, , , );
+	private Stack<DealCard> _bigDealStack;		
 	
 	public SmallDealStack()
 	{
 		DealCard[] sdArray = {SD01, SD02, SD03, SD04, SD05, SD06, SD07, SD08, SD09, SD10, 
-							  SD11, SD12, SD13, SD14, SD15, SD16, SD17, SD18, SD19, SD20, 
-							  SD21, SD22, SD23, SD24, SD25, SD26, SD27, SD28, SD29, SD30, 
-							  SD31, SD32, SD33, SD34, SD35, SD36, SD37, SD38};
+				  SD11, SD12, SD13, SD14, SD15, SD16, SD17, SD18, SD19, SD20, 
+				  SD21, SD22, SD23, SD24, SD25, SD26, SD27, SD28, SD29, SD30, 
+				  SD31, SD32, SD33, SD34, SD35, SD36, SD37, SD38};
 		super.randomizeCards(sdArray);
-
+		List<DealCard> list = Arrays.asList(sdCardArray);
+		Stack<DealCard> SDCardStack = new Stack<DealCard>();
+		SDCardStack.addAll(list);
+			
+		_bigDealStack = SDCardStack; 
 	}
+
 	
 }
 

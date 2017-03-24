@@ -7,7 +7,7 @@ public class FinancialStatement
 	private double[] realEstate;
 	private String career;
 	private double expenses;
-	private double assets;
+	public static double assets; //sorry i had to make this change to use w/ cards if i messed something up just change it im sorry!!
 	private double liabilities;
 	private double income;
 	

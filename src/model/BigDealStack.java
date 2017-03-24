@@ -1,5 +1,9 @@
 package model;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Stack;
+
 public class BigDealStack extends CardStack
 {
 	private static DealCard BD1= new DealCard("Limited Partner Wanted",
@@ -110,7 +114,7 @@ public class BigDealStack extends CardStack
 	private static DealCard BD36 = new DealCard("House for Sale - 3Br/2Ba", 
 								"Skilled Tradesman kept this 3/2 house in excellent condition, so it commands top-dollar rent in older neighborhood",
 								325000, 18000, 307000, 900);
-			
+	private Stack<DealCard> _bigDealStack;		
 	public BigDealStack()
 	{
 		DealCard[] bdCardArray = {BD1, BD2, BD3, BD4, BD5, BD6, BD7, BD8, BD9, BD10, 
@@ -118,6 +122,11 @@ public class BigDealStack extends CardStack
 								  BD21, BD22, BD23, BD24, BD25, BD26, BD27, BD28, BD29, BD30,
 								  BD31, BD32, BD33, BD34, BD35, BD36};
 		super.randomizeCards(bdCardArray);
+		List<DealCard> list = Arrays.asList(bdCardArray);
+		Stack<DealCard> BDCardStack = new Stack<DealCard>();
+		BDCardStack.addAll(list);
+			
+		_bigDealStack = BDCardStack; 
 	}
 			
 	
