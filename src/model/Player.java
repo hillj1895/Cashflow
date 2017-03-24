@@ -2,7 +2,7 @@ package model;
 
 public class Player
 {
-	public FinacialStatement _fs; //financial statement of user
+	public FinancialStatement _fs; //financial statement of user
 	//idNumber?
 //	public boolean _charity;
 	private int _CharityCount; //charity counter

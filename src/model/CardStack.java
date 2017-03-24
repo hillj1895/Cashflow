@@ -30,8 +30,10 @@ public class CardStack extends Stack<Card>
 	@Override
 	public Card pop()
 	{
+		Card c = super.pop();
 		_size--;
-		return super.pop();
+		super.add(c);
+		return c;
 	}
 	
 	public Card pickCard()

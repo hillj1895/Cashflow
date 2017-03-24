@@ -16,13 +16,24 @@ public class Cashflow
 		/*
 		 * Just testing stuff in here for now. Main method will call the go() method when game is built
 		 */
-		MarketStack ms = new MarketStack();
+		BigDealStack ms = new BigDealStack();
 		int initialSize = ms.getSize();
 		for(int i=0; i<initialSize; i++)
 		{
 			int num = i+1;
-			System.out.println(num + ": " + ((MarketCard) ms.pop()).getTitle()); //Always going to need this cast when getting description unfortunately
+			System.out.println(num + ": " + (ms.get(i).getTitle())); //Always going to need this cast when getting description unfortunately
 		}
+		
+		
+		System.out.println("Just popped: " + ms.pop().getTitle());
+		
+		for(int i=0; i<initialSize; i++)
+		{
+			int num = i+1;
+			System.out.println(num + ": " + (ms.get(i).getTitle())); //Always going to need this cast when getting description unfortunately
+		}
+		
+		
 	}
 	
 	public void go()
@@ -50,9 +61,11 @@ public class Cashflow
 			// Check down sized (check if player's downsize counter is 0)
 			// Check charity (Check if charity counter is 0)
 			// Roll dice
-			// Move player
-			// Get card from tile ()
-			// 
+			// Move player (Have to wrap tiles to next tile after last tile is the beginning)
+			// Get card from tile (Method in tile to get card from its type or perform action for baby, down size, or charity)
+			// Perform card/tile action
+			// Update current/all players' financials
+			// Increment player array (Also needs to wrap like tiles array)
 		}
 	}
 	

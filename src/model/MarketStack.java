@@ -6,12 +6,12 @@ package model;
 public class MarketStack extends CardStack
 {
 	//Not sure how we're working in the descriptions as it's a more graphical concept but for now I'm going to type them out
-	private static MarketCard Profit1 = new MarketCard("Small Business Boom!",
-										"The downtown economy has exploded! EVERYONE is affected! ALL businesses with a cash flow of $1000 or less have their cash flow increased by $250", 
-										"profit", true, 250, "");
-	private static MarketCard Profit2 = new MarketCard("New Management System", 
-										"A new management system creates new efficiencies and lowers costs. Only the person who drew this MarketCard is affected.",
-										"profit", false, 400, "");
+	//private static MarketCard Profit1 = new MarketCard("Small Business Boom!",
+	//									"The downtown economy has exploded! EVERYONE is affected! ALL businesses with a cash flow of $1000 or less have their cash flow increased by $250", 
+	//									"profit", true, 250, "");
+	//private static MarketCard Profit2 = new MarketCard("New Management System", 
+	//									"A new management system creates new efficiencies and lowers costs. Only the person who drew this MarketCard is affected.",
+	//									"profit", false, 400, "");
 	
 	//gold MarketCard - value is $ per coin
 //	private static MarketCard Gold1 = new MarketCard("Price of Gold Soars", 
@@ -166,6 +166,7 @@ public class MarketStack extends CardStack
 	 *
 	 * 
 	 */
+	/*
 	public void Action(Player player){
 		currentcard = marketCardArray.pop();
 		currentcard.display(); //will be a method in MarketCard to display the GUI for the card
