@@ -45,18 +45,18 @@ public class MarketStack extends CardStack
 										"expense", false, 1000 ,"");
 	
 	//stock MarketCard - no value necessary
-	private static MarketCard Stock1 = new MarketCard("Stock - MYT4U Electronics Co.", 
-										"MYT4U takes a gamble on new home entertainment tech. Will it hit big or be the next Beta-Max? MarketCardholder Rolls 1 Die. Die = 1-3, STOCK SPLITS! Everyone who owns MYT4U DOUBLES their number of shares. Die 4-6, STOCK REVERSE SPLITS! Everyone who owns MYT4U loses half their shares.",
-										"stock",true,0, "MYT4U");
-	private static MarketCard Stock2 = new MarketCard("Stock - GRO4US Fund", 
-										"The market is in flux and there will be monumental market swings over the next few months. How will mutual funds fair in this time of change? MarketCardholder Rolls 1 Die. Die = 1-3, STOCK SPLITS! Everyone who owns GRO4US DOUBLES their number of shares. Die 4-6, STOCK REVERSE SPLITS! Everyone who owns GRO4US loses half their shares.",
-										"stock",true,0, "GRO4US");
-	private static MarketCard Stock3 = new MarketCard("Stock - ON2U Entertainment Co.", 
-										"Studio backs fresh director for its summer blockbuster. Groundbreaking production could be too ambitious. MarketCardholder Rolls 1 Die. Die = 1-3, STOCK SPLITS! Everyone who owns ON2U DOUBLES their number of shares. Die 4-6, STOCK REVERSE SPLITS! Everyone who owns ON2U loses half their shares.",
-										"stock",true,0, "ON2U");
-	private static MarketCard Stock4 = new MarketCard("Stock - OK4U Drug Co.", 
-										"OK4U begins trial on possible life-saving drug. Side effects are untested. Could change the world... if it works. MarketCardholder Rolls 1 Die. Die = 1-3, STOCK SPLITS! Everyone who owns OK4U DOUBLES their number of shares. Die 4-6, STOCK REVERSE SPLITS! Everyone who owns OK4U loses half their shares.",
-										"stock",true,0,"OK4U");
+	//private static MarketCard Stock1 = new MarketCard("Stock - MYT4U Electronics Co.", 
+	//									"MYT4U takes a gamble on new home entertainment tech. Will it hit big or be the next Beta-Max? MarketCardholder Rolls 1 Die. Die = 1-3, STOCK SPLITS! Everyone who owns MYT4U DOUBLES their number of shares. Die 4-6, STOCK REVERSE SPLITS! Everyone who owns MYT4U loses half their shares.",
+	//									"stock",true,0, "MYT4U");
+	//private static MarketCard Stock2 = new MarketCard("Stock - GRO4US Fund", 
+	//									"The market is in flux and there will be monumental market swings over the next few months. How will mutual funds fair in this time of change? MarketCardholder Rolls 1 Die. Die = 1-3, STOCK SPLITS! Everyone who owns GRO4US DOUBLES their number of shares. Die 4-6, STOCK REVERSE SPLITS! Everyone who owns GRO4US loses half their shares.",
+	//									"stock",true,0, "GRO4US");
+	//private static MarketCard Stock3 = new MarketCard("Stock - ON2U Entertainment Co.", 
+	//									"Studio backs fresh director for its summer blockbuster. Groundbreaking production could be too ambitious. MarketCardholder Rolls 1 Die. Die = 1-3, STOCK SPLITS! Everyone who owns ON2U DOUBLES their number of shares. Die 4-6, STOCK REVERSE SPLITS! Everyone who owns ON2U loses half their shares.",
+	//									"stock",true,0, "ON2U");
+	//private static MarketCard Stock4 = new MarketCard("Stock - OK4U Drug Co.", 
+	//									"OK4U begins trial on possible life-saving drug. Side effects are untested. Could change the world... if it works. MarketCardholder Rolls 1 Die. Die = 1-3, STOCK SPLITS! Everyone who owns OK4U DOUBLES their number of shares. Die 4-6, STOCK REVERSE SPLITS! Everyone who owns OK4U loses half their shares.",
+	//									"stock",true,0,"OK4U");
 	
 	//repercent - how much percentage selling your property would yield you (aka if it's current cost + 10%, you'd yield 110% of the original cost in the sale minus what you owe
 	private static MarketCard REPercent1 = new MarketCard("House Buyer - 3BR/2BA", 
@@ -93,7 +93,7 @@ public class MarketStack extends CardStack
 										"refixed",true,15000,"3Br2Ba");
 	private static MarketCard REFixed2 = new MarketCard("House Buyer - 3BR/2BA", 
 										"Buyer searching for 3Br/2Ba house. Offers your original cost plus $10,000. Everyone may sell any number of properties at this price. If you sell, pay off the related mortgage and give up the cash flow on this property.",
-										"refixed",true,1000,"3Br2Ba");
+										"refixed",true,10000,"3Br2Ba");
 	private static MarketCard REFixed3 = new MarketCard("House Buyer - 3BR/2BA", 
 										"Buyer searching for 3Br/2Ba house. Offers your original cost plus $20,000. Everyone may sell any number of properties at this price. If you sell, pay off the related mortgage and give up the cash flow on this property.",
 										"refixed",true,20000,"3Br2Ba");
@@ -145,9 +145,9 @@ public class MarketStack extends CardStack
 	public MarketStack()
 	{
 		MarketCard[] marketCardArray = {Profit1, Profit2, 
-										Gold1, Gold2, Gold3, Gold4, 
+										//Gold1, Gold2, Gold3, Gold4, 
 										Expense1, Expense2, Expense3, Expense4, Expense5,
-										Stock1, Stock2, Stock3, Stock4,
+										//Stock1, Stock2, Stock3, Stock4,
 										REPercent1, REPercent2, REPercent3, REPercent4, REPercent5, REPercent6, REPercent7, REPercent8, REPercent9,
 										REFixed1, REFixed2, REFixed3, REFixed4, REFixed5, REFixed6, REFixed7, REFixed8, REFixed9, REFixed10, REFixed11,
 										REHOffer1, REHOffer2,

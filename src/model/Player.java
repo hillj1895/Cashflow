@@ -4,4 +4,6 @@ public class Player
 {
 	private FinancialStatement _fs;
 	
+	
+	
 }

@@ -45,7 +45,29 @@ public class Cashflow
 	
 	public void play()
 	{
-		
+		while(!isWinner())
+		{
+			// Check down sized (check if player's downsize counter is 0)
+			// Check charity (Check if charity counter is 0)
+			// Roll dice
+			// Move player
+			// Get card from tile ()
+			// 
+		}
+	}
+	
+	public boolean isWinner()
+	{
+		for(Player p : _players)
+		{
+			if(p.hasWon())
+			{
+				return true;
+				break;
+			}
+			else
+				return false;
+		}
 	}
 	
 	

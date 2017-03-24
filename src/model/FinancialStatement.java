@@ -11,6 +11,29 @@ public class FinancialStatement
 	private double liabilities;
 	private double income;
 	
+	public FinancialStatement(Profession p)
+	{
+		salary = p.getSalary();
+		
+	}
+	
+	public void setChildExp(int i) // One fo these for each of the little line items that actually change
+	{
+		//childExp = i;
+		update();
+	}
+	
+	
+	private void update()
+	{
+		//expenses = asdf +asdf_A+sdf+ASDf
+		//income = blah+ blah
+		//cashflow = bluh + bluh
+		
+		
+	}
+
+
 	Profession p = new Profession("Teacher", 3300, 500, 500, 100, 100, 200, 700, 0, 0, 
 			200, 400, 50000, 12000, 5000, 4000);
 	
@@ -39,10 +62,7 @@ public class FinancialStatement
 		income = p.getSalary();
 		return income;
 	}
-	public void FinancialStatement()
-	{
-		
-	}
+
 	public void display()
 	{
 		
