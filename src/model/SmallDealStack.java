@@ -124,18 +124,8 @@ public class SmallDealStack extends CardStack
 							  SD21, SD22, SD23, SD24, SD25, SD26, SD27, SD28, SD29, SD30, 
 							  SD31, SD32, SD33, SD34, SD35, SD36, SD37, SD38};
 		super.randomizeCards(sdArray);
-		}
+
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
 

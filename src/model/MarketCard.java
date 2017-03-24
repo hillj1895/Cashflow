@@ -6,6 +6,7 @@ public class MarketCard extends Card
 	private String _type;
 	private boolean _affectAll;
 	private int _value;
+	private String _addit;
 	
 	public MarketCard(String title, String description, String type, boolean affectAll, int value, String addit)
 	{

@@ -2,6 +2,6 @@ package model;
 
 public class Player
 {
-	private FinacialStatement _fs;
+	private FinancialStatement _fs;
 	
 }

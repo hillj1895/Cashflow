@@ -1,6 +1,6 @@
 package model;
 
-public class FinacialStatement
+public class FinancialStatement
 {
 	private double salary;
 	private double interest;
