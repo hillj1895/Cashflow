@@ -50,6 +50,8 @@ public class DoodadStack extends CardStack
 	private static DoodadCard D42 = new DoodadCard("Season Tickets", 1500);
 	
 	// Constructor just calls makes this stack a randomized stack with Doodad cards
+	private Stack<DoodadCard> _doodadStack;
+	
 	public DoodadStack()
 	{
 		DoodadCard[] cardArray = {D01, D02, D03, D04, D05, D06, D07, D08, D09, D10,
@@ -58,6 +60,12 @@ public class DoodadStack extends CardStack
 								  D31, D32, D33, D34, D35, D36, D37, D38, D39, D40, D41, D42};
 		
 		super.randomizeCards(cardArray);
+		List<DoodadCard> list = Arrays.asList(cardArray);
+		Stack<DoodadCard> DoodadCardStack = new Stack<DoodadCard>();
+		DoodadCardStack.addAll(list);
+			
+		_doodadStack = DoodadCardStack; 
+		
 	}
 
 	
