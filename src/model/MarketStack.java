@@ -171,12 +171,9 @@ public class MarketStack extends CardStack
 	 *
 	 * 
 	 */
-<<<<<<< HEAD
-	/*
-=======
+
 	private static MarketCard currentcard = new MarketCard(null, null, null, 1, null);
 	
->>>>>>> branch 'master' of https://github.uconn.edu/joh13010/2102-Group-Project-Spring-2017.git
 	public void Action(Player player){
 		currentcard = _marketCardStack.pop();
 		currentcard.display(); //will be a method in MarketCard to display the GUI for the card

@@ -1,10 +1,12 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Tile
 {
 	private String _name;
 	private int _boardIndex;
-	private Player[] _players;
+	private ArrayList<Player> _players;
 	
 	public Tile(String name, int boardIndex)
 	{
@@ -22,5 +24,19 @@ public class Tile
 		return _name;
 	}
 	
+	public void getLandedOn()
+	{
+		
+	}
+	
+	public void addPlayer(Player p)
+	{
+		_players.add(p);
+	}
+	
+	public void removePlayer(Player p)
+	{
+		_players.remove(p);
+	}
 	
 }

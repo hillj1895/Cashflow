@@ -2,7 +2,7 @@ package model;
 
 public class TileCircularLinkedList
 {
-	class Node {
+	public class Node {
 	    Tile t;
 	    Node next;
 	    public Node(Tile tile) {

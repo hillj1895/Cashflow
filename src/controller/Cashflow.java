@@ -9,7 +9,7 @@ public class Cashflow
 	
 	private GameBoard _board;
 	private Player[] _players;
-	private CardStack[] _cards;
+	//private CardStack[] _cards;
 	
 	public static void main(String[] args)
 	{
@@ -42,7 +42,6 @@ public class Cashflow
 		// Initialize game board
 		// Initialize GUI
 		// Initialize players (pick professions)
-		// Initialize cards
 		
 		
 		/*
@@ -58,12 +57,13 @@ public class Cashflow
 	{
 		while(!isWinner())
 		{
+			// TODO Play method
+			// Get player whose turn it is
 			// Check down sized (check if player's downsize counter is 0)
 			// Check charity (Check if charity counter is 0)
 			// Roll dice
 			// Move player (Have to wrap tiles to next tile after last tile is the beginning)
-			// Get card from tile (Method in tile to get card from its type or perform action for baby, down size, or charity)
-			// Perform card/tile action
+			// Call tile's getLandedOn method
 			// Update current/all players' financials
 			// Increment player array (Also needs to wrap like tiles array)
 		}
@@ -76,7 +76,6 @@ public class Cashflow
 			if(p.hasWon())
 			{
 				return true;
-				break;
 			}
 			else
 				return false;
