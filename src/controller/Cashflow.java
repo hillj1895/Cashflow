@@ -67,6 +67,7 @@ public class Cashflow
 			else
 				return false;
 		}
+		//needs a return statement (when opened on the lab PC's showed an error
 	}
 	
 	public static void testCards()
