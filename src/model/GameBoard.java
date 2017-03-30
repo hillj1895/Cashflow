@@ -12,7 +12,7 @@ public class GameBoard
 	private static Tile t2 = new DoodadTile("Doodad", 1);
 	private static Tile t3 = new DealTile("Deal", 2);
 	private static Tile t4 = new CharityTile("Charity", 3);
-	
+
 	
 	
 	public GameBoard()

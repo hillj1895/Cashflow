@@ -20,11 +20,6 @@ public class Player
 		return _winner;
 	}
 	
-	//needs to roll dice
-	public void pickCard() {
-		
-	}
-	
 	public FinancialStatement getFinancialStatement()
 	{
 		return _fs;
