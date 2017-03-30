@@ -2,49 +2,142 @@ package model;
 
 import java.util.ArrayList;
 
-
 public class FinancialStatement
 {
+	private Profession _profession;
+	
 	private int _cashBalance;
-	private double salary;
-	private double interest;
-	private double[] realEstate;
-	private String career;
-	private double expenses;
-	public static double assets; //sorry i had to make this change to use w/ cards if i messed something up just change it im sorry!!
-	private double liabilities;
-	private double income;
+	
+	// Income
+	private int _income; // needs getter and incrementer
+	private int _salary;
+	private int _REcashFlow;	// needs getter and incrementer
+	
+	// Expenses
+	private int _expenses;	// needs getter and incrementer
+	private int _taxes;
+	private int _homeMortgagePayment;
+	private int _schoolLoanPayment;
+	private int _carLoanPayment;
+	private int _creditCardPayment;
+	private int _otherExpenses;
+	private int _perChildExpense;
+	private int _numChildren;	// needs getter and incrementer
+	
+	// Assets
+	private int _assets;
+	private int _savings;
 	private Stock _stock;
-	private ArrayList<OwnedRealEstate> _realEstate = new ArrayList<OwnedRealEstate>();
+	private ArrayList<OwnedRealEstate> _realEstate;
+	
+	// Liabilities
+	private int _liabilities;
+	private int _homeMortgage;
+	private int _schoolLoans;
+	private int _carLoans;
+	private int _creditCardDebt;
+	
+	// Cash flows (top right of actual financial statement)
+	private int _monthlySalary;
+	private int _passiveIncome;
+	private int _totalIncome;
+	private int _totalExpenses;
+	private int _monthlyCashFlow;
+	private boolean _hasWon;
+	
+	
 	
 	public FinancialStatement(Profession p)
 	{
-		// TODO Set each major line item to the sum of the smaller ones
-		salary = p.getSalary();
+		_profession = p;
 		
-	}
-	
-	public void setChildExp(int i) // One of these for each of the little line items that actually change
-	{
-		//childExp = i;
+		// Income
+		_income = 0;
+		_salary = p.getSalary();
+		_REcashFlow = 0;
+		
+		// Expenses
+		_expenses = 0;	
+		_taxes = p.getTaxes();
+		_homeMortgagePayment = p.getMortgagePay();
+		_schoolLoanPayment = p.getSchoolLoanPay();
+		_carLoanPayment = p.getCarLoanPay();
+		_creditCardPayment = p.getCreditCardPay();
+		_otherExpenses = p.getOtherExp();
+		_perChildExpense = p.getChildExpPer();
+		_numChildren = 0;
+		
+		// Assets
+		_assets = 0;
+		_savings = p.getSavings();
+		_realEstate = new ArrayList<OwnedRealEstate>();
+		
+		// Liabilities
+		_liabilities = 0;
+		_homeMortgage = p.getMortgage(); 
+		_schoolLoans = p.getSchoolLoans();
+		_carLoans = p.getCarLoans();
+		_creditCardDebt = p.getCreditCardDebt();
+		
+		// Cash flows
+		_monthlySalary = _salary;
+		_passiveIncome = 0;
+		_totalIncome = 0;
+		_totalExpenses = 0;
+		_monthlyCashFlow = 0;
+		_hasWon = false;
+		
 		update();
 	}
 	
-	
 	private void update()
 	{
-		//expenses = asdf +asdf_A+sdf+ASDf
-		//income = blah+ blah
-		//cashflow = bluh + bluh
+		_income = _salary + _REcashFlow;
+		_expenses = _taxes + _homeMortgagePayment + _schoolLoanPayment + _carLoanPayment + _creditCardPayment + _otherExpenses + (_perChildExpense * _numChildren);
+		_assets = getOwnedREValue() + _savings;
+		_liabilities = _homeMortgage + _schoolLoans + _carLoans + _creditCardDebt;
 		
-		
+		_passiveIncome = getPassiveIncome();
+		_totalIncome = _monthlySalary + _passiveIncome;
+		_totalExpenses = _expenses;
+		_monthlyCashFlow = _totalIncome - _totalExpenses;
+		_hasWon = _passiveIncome > _totalExpenses;
+	}
+	
+	private int getPassiveIncome()
+	{
+		int passiveInc = 0;
+		for(OwnedRealEstate re : _realEstate)
+		{
+			passiveInc += re.getCashFlow();
+		}
+		return passiveInc;
 	}
 
+	public int getOwnedREValue()
+	{
+		int reValue = 0;
+		for(OwnedRealEstate re : _realEstate)
+		{
+			reValue += re.getPrice();
+		}
+		return reValue;
+	}
+	
+	public void buyProperty(OwnedRealEstate newProperty)
+	{
+		_cashBalance -= newProperty.getDownPayment();
+		_realEstate.add(newProperty);
+		
+		update();
+	}
+	
 	public void buyStock(int numShares, int sharePrice)
 	{
 		_stock = new Stock(numShares, sharePrice);
 		int cashOut = _stock.getCashOut();
 		_cashBalance += cashOut;	// getCashOut() will negate the value automatically so we will add not subtract
+		update();
 	}
 	
 	public void sellStock()
@@ -53,45 +146,38 @@ public class FinancialStatement
 		_stock = null;
 	}
 	
-	Profession p = new Profession("Teacher", 3300, 500, 500, 100, 100, 200, 700, 0, 0, 
-			200, 400, 50000, 12000, 5000, 4000);
-	
-	public double expenses()
+	public void addChild()
 	{
-		expenses = p.getTaxes() + p.getMortgagePay() + p.getSchoolLoanPay() + p.getCarLoanPay()
-					+ p.getCreditCardPay() + p.getOtherExp() + p.getBankLoanPay() + p.getChildExp();
-		return expenses;
+		// People can only have 3 children
+		if(_numChildren < 3)
+		{
+			_numChildren++;
+		}
+		update();
 	}
 	
-	public double assets()
-	{
-		assets = p.getSavings();
-		
-		return assets;
-	}
 	
-	public double liabilities()
-	{
-		liabilities = p.getMortgage() + p.getSchoolLoans() + p.getCarLoans() + p.getCreditCardDebt();
-		return liabilities;
-	}
 	
-	public double income()
+	public int getCashBalance()
 	{
-		income = p.getSalary();
-		return income;
-	}
-
-	public void display()
-	{
-		
-	}
-
-	public int getCashBalance() {
 		return _cashBalance;
 	}
 
-	public void increaseCashBalance(int cashIncrease) {
+	public void increaseCashBalance(int cashIncrease)
+	{
 		this._cashBalance =+ cashIncrease;
 	}
+
+
 }
+
+
+
+
+
+
+
+
+
+
+

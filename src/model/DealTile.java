@@ -20,7 +20,7 @@ public class DealTile extends Tile
 		// Ask user to decide big/small deal:
 		// Pick card from big/small deal stack:
 		// If stock, update price, then ask user if they want to buy and ask everyone if they want to sell:
-		// If property, ask user if they want to do it:
+		// If property, ask user if they want to do it (and check if they can afford the down payment):
 		// If yes, call ButIncomeProperty method:
 		// Else, do nothing:
 	}
@@ -28,15 +28,8 @@ public class DealTile extends Tile
 	public void buyIncomeProperty(Player p, DealCard d)
 	{
 		FinancialStatement f = p.getFinancialStatement();
-		
-		OwnedRealEstate newProperty = new OwnedRealEstate(d.getTitle(), d.getCost(), d.getDownPayment());
-		f.addProperty(newProperty);
-		
-		// Add functionality in this ^^ to do this:
-		
-		//f.increaseCashBalance(-d.getDownPayment());					// Watch out for negatives
-		//f.increasePassiveIncome(d.getCashFlowChange());
-		
+		OwnedRealEstate newProperty = new OwnedRealEstate(d.getTitle(), d.getCost(), d.getDownPayment(), d.getCashFlowChange());
+		f.buyProperty(newProperty);
 		
 	}
 	

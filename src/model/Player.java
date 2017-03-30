@@ -25,7 +25,7 @@ public class Player
 		return _fs;
 	}
 	
-	public boolean donateCharity() { 
+	public boolean donateCharity() {
 		//
 		return false;
 	}
