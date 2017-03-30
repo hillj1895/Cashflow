@@ -16,26 +16,13 @@ public class Cashflow
 		/*
 		 * Just testing stuff in here for now. Main method will call the go() method when game is built
 		 */
-		BigDealStack ms = new BigDealStack();
-		int initialSize = ms.getSize();
-		for(int i=0; i<initialSize; i++)
-		{
-			int num = i+1;
-			System.out.println(num + ": " + (ms.get(i).getTitle())); //Always going to need this cast when getting description unfortunately
-		}
 		
-		
-		System.out.println("Just popped: " + ms.pop().getTitle());
-		
-		for(int i=0; i<initialSize; i++)
-		{
-			int num = i+1;
-			System.out.println(num + ": " + (ms.get(i).getTitle())); //Always going to need this cast when getting description unfortunately
-		}
+		testCards();
 		
 		
 	}
-	
+
+
 	public void go()
 	{
 		// Joe
@@ -82,5 +69,42 @@ public class Cashflow
 		}
 	}
 	
-	
+	public static void testCards()
+	{
+		BigDealStack ms = new BigDealStack();
+		int initialSize = ms.getSize();
+		for(int i=0; i<initialSize; i++)
+		{
+			int num = i+1;
+			System.out.println(num + ": " + (ms.get(i).getTitle())); //Always going to need this cast when getting description unfortunately
+		}
+		
+		
+		System.out.println("Just popped: " + ms.pop().getTitle());
+		
+		for(int i=0; i<initialSize; i++)
+		{
+			int num = i+1;
+			System.out.println(num + ": " + (ms.get(i).getTitle())); //Always going to need this cast when getting description unfortunately
+		}
+		
+		
+	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

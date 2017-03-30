@@ -22,28 +22,28 @@ public class GameBoard
 	}
 	
 	
-	// TODO This method will move the player and return true if they passed a payday along the way.
+	// TODO This method will move the player and returns the number of paydays they passed along the way.
 	// It also removes the player from the _players ArrayList of their initial tile and adds them to the 
-	// arraylist of the tile they land on
-	public boolean movePlayer(Player p, int distance)
+	// arraylist of the tile they land on.
+	public int movePlayer(Player p, int distance)
 	{
 		int currentLocation = p.getLocation();
 		Node currentNode = _tiles.get(currentLocation);
 		Tile currentTile = _tiles.elementAt(currentLocation);
 		currentTile.removePlayer(p);
-		boolean passedPayday = false;
+		int passedPaydays = 0;
 		for(int i=0; i<distance; i++)
 		{
 			Node nextNode = currentNode.getNext();
 			if(nextNode.getData().getName().equals("Payday"))
 			{
-				passedPayday = true;
+				passedPaydays++;
 			}
 			currentNode = nextNode;
 		}
 		currentNode.getData().addPlayer(p);
 		p.setLocation(currentNode.getData().getBoardIndex());
-		return passedPayday;
+		return passedPaydays;
 	}
 	
 	

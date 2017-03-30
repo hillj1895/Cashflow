@@ -29,11 +29,15 @@ public class DealTile extends Tile
 	{
 		FinancialStatement f = p.getFinancialStatement();
 		
-		f.increaseCashBalance(-d.getDownPayment());					// Watch out for negatives
-		f.increasePassiveIncome(d.getCashFlowChange());
-		
 		OwnedRealEstate newProperty = new OwnedRealEstate(d.getTitle(), d.getCost(), d.getDownPayment());
 		f.addProperty(newProperty);
+		
+		// Add functionality in this ^^ to do this:
+		
+		//f.increaseCashBalance(-d.getDownPayment());					// Watch out for negatives
+		//f.increasePassiveIncome(d.getCashFlowChange());
+		
+		
 	}
 	
 	public void updateStockPrice(DealCard d)
