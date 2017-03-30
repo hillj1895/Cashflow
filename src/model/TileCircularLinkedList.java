@@ -23,11 +23,11 @@ public class TileCircularLinkedList
     //add a new node at the start of the linked list
     public void addNodeAtStart(Tile tile){
         Node n = new Node(tile);
-        if(size==0){
+        if(size==0) {
             head = n;
             tail = n;
             n.next = head;
-        }else{
+        } else {
             Node temp = head;
             n.next = temp;
             head = n;
@@ -37,7 +37,7 @@ public class TileCircularLinkedList
     }
 
     
-    public void addNodeAtEnd(Tile tile){
+    public void addNodeAtEnd(Tile tile) {
         if(size==0){
             addNodeAtStart(tile);
         }else{

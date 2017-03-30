@@ -70,6 +70,7 @@ public class FinancialStatement
 		// Assets
 		_assets = 0;
 		_savings = p.getSavings();
+		_stock = null;
 		_realEstate = new ArrayList<OwnedRealEstate>();
 		
 		// Liabilities
@@ -94,7 +95,7 @@ public class FinancialStatement
 	{
 		_income = _salary + _REcashFlow;
 		_expenses = _taxes + _homeMortgagePayment + _schoolLoanPayment + _carLoanPayment + _creditCardPayment + _otherExpenses + (_perChildExpense * _numChildren);
-		_assets = getOwnedREValue() + _savings;
+		_assets = getOwnedREValue() + getStockValue() + _savings;
 		_liabilities = _homeMortgage + _schoolLoans + _carLoans + _creditCardDebt;
 		
 		_passiveIncome = getPassiveIncome();
@@ -113,6 +114,16 @@ public class FinancialStatement
 		}
 		return passiveInc;
 	}
+	
+	public int getStockValue()
+	{
+		if(_stock == null) {
+			return 0;
+		}
+		else {
+			return _stock.getNumShares() * _stock.getSharePrice();
+		}
+	}
 
 	public int getOwnedREValue()
 	{
@@ -124,11 +135,20 @@ public class FinancialStatement
 		return reValue;
 	}
 	
+	public boolean canBuy(int price)
+	{
+		return price < _cashBalance;
+	}
+	
+	public boolean hasStock()
+	{
+		return _stock != null;
+	}
+	
 	public void buyProperty(OwnedRealEstate newProperty)
 	{
 		_cashBalance -= newProperty.getDownPayment();
 		_realEstate.add(newProperty);
-		
 		update();
 	}
 	
@@ -144,19 +164,18 @@ public class FinancialStatement
 	{
 		_cashBalance += _stock.getSharePrice() * _stock.getNumShares();
 		_stock = null;
+		update();
 	}
 	
 	public void addChild()
 	{
-		// People can only have 3 children
+		// People can only have a max of 3 children
 		if(_numChildren < 3)
 		{
 			_numChildren++;
 		}
 		update();
 	}
-	
-	
 	
 	public int getCashBalance()
 	{
@@ -166,16 +185,11 @@ public class FinancialStatement
 	public void increaseCashBalance(int cashIncrease)
 	{
 		this._cashBalance =+ cashIncrease;
+		update();
 	}
 
 
 }
-
-
-
-
-
-
 
 
 

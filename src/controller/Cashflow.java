@@ -16,11 +16,12 @@ public class Cashflow
 		/*
 		 * Just testing stuff in here for now. Main method will call the go() method when game is built
 		 */
-		
-		testCards();
-		
+		testGamePlay();
 		
 	}
+
+
+
 
 
 	public void go()
@@ -58,16 +59,23 @@ public class Cashflow
 	
 	public boolean isWinner()
 	{
+		boolean isWinner = false;
 		for(Player p : _players)
 		{
 			if(p.hasWon())
 			{
 				return true;
 			}
-			else
-				return false;
 		}
+		return isWinner;
 	}
+	
+	private static void testGamePlay()
+	{
+		GameBoard g = new GameBoard();
+	}
+	
+	
 	
 	public static void testCards()
 	{
@@ -76,11 +84,15 @@ public class Cashflow
 		for(int i=0; i<initialSize; i++)
 		{
 			int num = i+1;
-			System.out.println(num + ": " + (ms.get(i).getTitle())); //Always going to need this cast when getting description unfortunately
+			System.out.println(num + ": " + ms.get(i).getTitle()); //Always going to need this cast when getting description unfortunately
 		}
 		
+		Card c1 = ms.pop();
+		Card c2 = ms.pop();
 		
-		System.out.println("Just popped: " + ms.pop().getTitle());
+		
+		System.out.println("Just popped: " + c1.getTitle());
+		System.out.println("Just popped: " + c2.getTitle());
 		
 		for(int i=0; i<initialSize; i++)
 		{

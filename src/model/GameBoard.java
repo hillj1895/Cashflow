@@ -22,7 +22,7 @@ public class GameBoard
 	}
 	
 	
-	// TODO This method will move the player and returns the number of paydays they passed along the way.
+	// TODO This method will move the player and returns the number of pay days they passed along the way.
 	// It also removes the player from the _players ArrayList of their initial tile and adds them to the 
 	// arraylist of the tile they land on.
 	public int movePlayer(Player p, int distance)

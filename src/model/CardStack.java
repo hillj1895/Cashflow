@@ -1,15 +1,15 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Random;
 import java.util.Stack;
 
 /**
- * Made this class just to add functionality to a general stack to keep track of its size
+ * This class extends Java's linked list but had added methods to make interacting with the card stack much easier
  * @author Joe
- *
  */
-public class CardStack extends Stack<Card>
+public class CardStack extends LinkedList<Card>
 {
 	private static final long serialVersionUID = 1L;
 	private int _size;
@@ -21,18 +21,18 @@ public class CardStack extends Stack<Card>
 	}
 	
 	@Override
-	public Card push(Card c)
+	public void push(Card c)
 	{
 		_size++;
-		return super.push(c);
+		super.addFirst(c);
 	}
 	
 	@Override
 	public Card pop()
 	{
-		Card c = super.pop();
+		Card c = super.removeFirst();
 		_size--;
-		super.add(c);
+		super.addLast(c);
 		return c;
 	}
 	
