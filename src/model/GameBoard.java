@@ -6,19 +6,22 @@ import model.TileCircularLinkedList.Node;
 
 public class GameBoard
 {
+	private Professions _profs;
+	
 	private TileCircularLinkedList _tiles;
 	
 	private static Tile t1 = new DealTile("Deal Tile", 0);
-	private static Tile t2 = new DoodadTile("Doodad", 1);
+	private static Tile t2 = new DealTile("Doodad", 1);
 	private static Tile t3 = new DealTile("Deal", 2);
-	private static Tile t4 = new CharityTile("Charity", 3);
-
+	private static Tile t4 = new DealTile("Charity", 3);
 	
 	
-	public GameBoard()
+	public GameBoard(Player... players)
 	{
+		_profs = new Professions();
 		_tiles = new TileCircularLinkedList();
 		_tiles.addTiles(t1, t2, t3, t4);
+		t1.addPlayers(players);
 	}
 	
 	
@@ -41,10 +44,14 @@ public class GameBoard
 			}
 			currentNode = nextNode;
 		}
-		currentNode.getData().addPlayer(p);
+		currentNode.getData().addPlayers(p);
 		p.setLocation(currentNode.getData().getBoardIndex());
 		return passedPaydays;
 	}
 	
+	public void getProfessions()
+	{
+		return _profs;
+	}
 	
 }

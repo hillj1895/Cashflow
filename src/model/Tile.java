@@ -29,9 +29,12 @@ public class Tile
 		
 	}
 	
-	public void addPlayer(Player p)
+	public void addPlayers(Player... players)
 	{
-		_players.add(p);
+		for(Player p : players)
+		{
+			_players.add(p);
+		}
 	}
 	
 	public void removePlayer(Player p)

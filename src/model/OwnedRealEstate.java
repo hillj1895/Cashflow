@@ -12,7 +12,7 @@ public class OwnedRealEstate
 		_name = name;
 		_price = price;
 		_downPayment = downPayment;
-		set_cashFlow(cashFlow);
+		_cashFlow = cashFlow;
 	}
 
 	public String getName() {
@@ -24,7 +24,6 @@ public class OwnedRealEstate
 	}
 
 	/**
-	 * 
 	 * @return Returns a positive value for down payment!!
 	 */
 	public int getDownPayment() {

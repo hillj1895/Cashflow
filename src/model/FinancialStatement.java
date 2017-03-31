@@ -188,7 +188,10 @@ public class FinancialStatement
 		update();
 	}
 
-
+	public Profession getProfession()
+	{
+		return _profession;
+	}
 }
 
 

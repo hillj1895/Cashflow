@@ -3,8 +3,15 @@ import java.util.Arrays;
 import java.util.Stack;
 import java.util.List;
 
+/**
+ * This class contains the content written on the physical 
+ * @author Joe
+ *
+ */
+
 public class MarketStack extends CardStack
 {
+	private static final long serialVersionUID = 1L;
 	//Not sure how we're working in the descriptions as it's a more graphical concept but for now I'm going to type them out
 
 	/*
@@ -143,6 +150,7 @@ public class MarketStack extends CardStack
 	private static MarketCard REAOffer4 = new MarketCard("Apartment House Buyer", 
 										"REIT offers $40,000 per unit for all units in apartment houses of 12 units or more. Buyer has capital from the sale of another apartment complex. Everyone may sell any number of properties at this price. If you sell, pay off the related mortgage and give up the cash flow on this property.",
 										"aoffer",40000,"Plex");
+	
 	private Stack<MarketCard> _marketCardStack; 
 	
 	public MarketStack()
@@ -163,6 +171,20 @@ public class MarketStack extends CardStack
 			
 		_marketCardStack = MarketCardStack; 
 	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 	//profit MarketCard - value is how much $ is added
 	
@@ -170,7 +192,6 @@ public class MarketStack extends CardStack
 	 * 
 	 *
 	 * 
-	 */
 
 	private static MarketCard currentcard = new MarketCard(null, null, null, 1, null);
 	

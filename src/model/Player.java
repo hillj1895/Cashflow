@@ -2,22 +2,23 @@ package model;
 
 public class Player
 {
-	private FinancialStatement _fs; //financial statement of user
-	//idNumber?
-//	public boolean _charity;
-	private int _CharityCount; //charity counter
-	private int _DownsizeCount; //downsize counter
+	private FinancialStatement _fs; 
+	private int _charityCount; //charity counter
+	private int _downsizeCount; //downsize counter
 	private int _location;
-	private boolean _winner = false;
+	private boolean _hasWon;
 	
-	public Player() { //constructor 
-		// TODO: Pick profession
+	public Player() { 
+		
+		_charityCount = 0;
+		_downsizeCount = 0;
 		_location = 0;
+		_hasWon = false;
 	}
 
 	
 	public boolean hasWon() {
-		return _winner;
+		return _hasWon;
 	}
 	
 	public FinancialStatement getFinancialStatement()
@@ -36,6 +37,30 @@ public class Player
 	
 	public int getLocation() {
 		return this._location;
+	}
+
+
+	public int getCharityCount()
+	{
+		return _charityCount;
+	}
+
+
+	public void decrementCharityCount()
+	{
+		_charityCount--;
+	}
+
+
+	public int getDownsizeCount()
+	{
+		return _downsizeCount;
+	}
+
+
+	public void decrememntDownsizeCount()
+	{
+		_downsizeCount--;
 	}
 	
 
