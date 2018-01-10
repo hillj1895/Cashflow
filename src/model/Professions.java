@@ -36,7 +36,7 @@ public class Professions
 	private static Profession Mechanic = new Profession("Mechanic", 2000, 400, 300, 0, 100, 100, 400, 0, 0, 100,
 			700, 31000, 0, 3000, 3000);
 	
-	private static Profession Janitor = new Profession("Janitor", 1600, 300, 200, 0, 100, 100, 300, 0, 0, 100,
+	private static final Profession Janitor = new Profession("Janitor", 1600, 300, 200, 0, 100, 100, 300, 0, 0, 100,
 			600, 20000, 0, 4000, 3000);
 	
 	private static Profession[] profs = {Nurse, Teacher, TruckDriver, Secretary, Engineer, BusinessManager, 
@@ -44,11 +44,7 @@ public class Professions
 	
 	public Profession playerProf;
 	
-	public Professions()
-	{
-		
-	}
-	
+	public Professions() {}
 	
 	public Profession getProfession()
 	{

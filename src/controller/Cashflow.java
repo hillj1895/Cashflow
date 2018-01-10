@@ -73,8 +73,8 @@ public class Cashflow
 	private static void testGamePlay()
 	{
 		Player p = new Player();
-		p.getFinancialStatement().getProfession().getName();
-		//GameBoard g = new GameBoard();
+		System.out.println(p.getFinancialStatement().getProfession().getName());
+		GameBoard g = new GameBoard();
 		
 	}
 	

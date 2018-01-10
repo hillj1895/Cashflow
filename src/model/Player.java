@@ -4,12 +4,14 @@ public class Player
 {
 	private FinancialStatement _fs; 
 	private int _charityCount; //charity counter
-	private int _downsizeCount; //downsize counter
+	private int _downsizeCount; //down size counter
 	private int _location;
 	private boolean _hasWon;
 	
-	public Player() { 
-		
+	public Player()
+	{
+		Professions p = new Professions();
+		_fs = new FinancialStatement(p.getProfession());
 		_charityCount = 0;
 		_downsizeCount = 0;
 		_location = 0;
@@ -17,7 +19,8 @@ public class Player
 	}
 
 	
-	public boolean hasWon() {
+	public boolean hasWon()
+	{
 		return _hasWon;
 	}
 	
@@ -26,16 +29,19 @@ public class Player
 		return _fs;
 	}
 	
-	public boolean donateCharity() {
+	public boolean donateCharity()
+	{
 		//
 		return false;
 	}
 	
-	public void setLocation(int i) {
+	public void setLocation(int i)
+	{
 		_location = i;
 	}
 	
-	public int getLocation() {
+	public int getLocation()
+	{
 		return this._location;
 	}
 

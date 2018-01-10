@@ -103,6 +103,8 @@ public class FinancialStatement
 		_totalExpenses = _expenses;
 		_monthlyCashFlow = _totalIncome - _totalExpenses;
 		_hasWon = _passiveIncome > _totalExpenses;
+		
+		// TODO add method to update display if its currently being displayed
 	}
 	
 	private int getPassiveIncome()

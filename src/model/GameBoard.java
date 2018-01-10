@@ -46,10 +46,11 @@ public class GameBoard
 		}
 		currentNode.getData().addPlayers(p);
 		p.setLocation(currentNode.getData().getBoardIndex());
+		currentNode.getData().getLandedOn(p);
 		return passedPaydays;
 	}
 	
-	public void getProfessions()
+	public Professions getProfessions()
 	{
 		return _profs;
 	}

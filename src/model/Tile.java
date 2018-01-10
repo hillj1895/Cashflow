@@ -24,7 +24,7 @@ public class Tile
 		return _name;
 	}
 	
-	public void getLandedOn()
+	public void getLandedOn(Player p)
 	{
 		
 	}

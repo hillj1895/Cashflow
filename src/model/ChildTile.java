@@ -7,4 +7,11 @@ public class ChildTile extends Tile
 		super(type, boardIndex);
 		
 	}
+	
+	@Override
+	public void getLandedOn(Player p)
+	{
+		// Increment child counter using addChild() method in financial statement
+	}
+	
 }
